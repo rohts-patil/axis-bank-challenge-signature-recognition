@@ -1,4 +1,8 @@
+_author_ = "Rohit Patil"
+
 from flask import Flask, render_template, redirect, url_for, request
+from models import User
+from operations import LoginValidator
 
 app = Flask(__name__)
 
@@ -14,6 +18,9 @@ def welcome():
 def login():
     error = None
     if request.method == 'POST':
+        user = User(request.form['username'], request.form['password'])
+        validator = LoginValidator(user)
+        validator.validate()
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
             error = 'Invalid Credentials. Please try again.'
         else:
