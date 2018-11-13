@@ -3,8 +3,15 @@ _author_ = "Rohit Patil"
 from flask import Flask, render_template, redirect, url_for, request
 from models.User import User
 from operations.LoginValidator import LoginValidator
+from config.config import Config
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 app = Flask(__name__)
+
+app.config.from_object(Config)
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 
 # Route for handling the welcome page logic
