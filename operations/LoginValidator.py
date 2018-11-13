@@ -9,4 +9,4 @@ class LoginValidator:
         self.user = user
 
     def validate(self):
-        return true
+        return True
