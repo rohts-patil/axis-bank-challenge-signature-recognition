@@ -1,1 +1,0 @@
-CREATE TABLE users (username TEXT, password TEXT, role TEXT)
