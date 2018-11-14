@@ -4,6 +4,7 @@ from flask import Flask, render_template, redirect, url_for, request
 from operations.LoginValidator import LoginValidator
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 
 from config.config import Config
 
@@ -15,18 +16,28 @@ db = SQLAlchemy(app)
 db.init_app(app)
 migrate = Migrate(app, db)
 
+login = LoginManager(app)
+
 from app.models import User
+from app import routes
 
 
 # Route for handling the welcome page logic
+#@app.route('/')
+#def welcome():
+#       return render_template('welcome.html')
+
+
 @app.route('/')
-def welcome():
-    return render_template('welcome.html')
+@app.route('/index')
+def index():
+    user = {'username': 'There'}
+    return render_template('index.html', title='Home', user=user)
 
 
 # Route for handling the login page logic
-@app.route('/login', methods=['GET', 'POST'])
-def login():
+#@app.route('/login', methods=['GET', 'POST'])
+def login_user():
     error = None
     if request.method == 'POST':
         user = User(request.form['username'], request.form['password'])
