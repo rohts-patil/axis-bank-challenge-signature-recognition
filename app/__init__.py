@@ -17,6 +17,7 @@ db.init_app(app)
 migrate = Migrate(app, db)
 
 login = LoginManager(app)
+login.login_view = 'login'
 
 from app.models import User
 from app import routes
@@ -28,11 +29,7 @@ from app import routes
 #       return render_template('welcome.html')
 
 
-@app.route('/')
-@app.route('/index')
-def index():
-    user = {'username': 'There'}
-    return render_template('index.html', title='Home', user=user)
+
 
 
 # Route for handling the login page logic
