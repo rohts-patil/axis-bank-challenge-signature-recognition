@@ -10,4 +10,5 @@ Run the following commands on the root directory:-
 
 ### Resources
 1. https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database
-
+2. http://www.iapr-tc11.org/dataset/ICDAR_SignatureVerification/SigComp2011/sigComp2011-trainingSet.zip
+3. http://www.iapr-tc11.org/dataset/ICDAR_SignatureVerification/SigComp2011/sigComp2011-test.zip
