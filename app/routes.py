@@ -50,4 +50,6 @@ def logout():
 
 @app.route('/validateImage')
 def validate_image():
+    # take the image from request and pass it into the model,
+    # check the output and return whether the image is forged or genuine
     pass
