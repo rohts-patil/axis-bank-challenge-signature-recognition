@@ -48,8 +48,9 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
-@app.route('/validateImage')
-def validate_image():
+
+@app.route('/predict', methods=['POST'])
+def predict():
     # take the image from request and pass it into the model,
     # check the output and return whether the image is forged or genuine
     pass
