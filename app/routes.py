@@ -54,3 +54,9 @@ def predict():
     # take the image from request and pass it into the model,
     # check the output and return whether the image is forged or genuine
     pass
+
+@app.route('/save', methods=['POST'])
+def save_image():
+    # take the image from request and pass it into the model,
+    # check the output and return whether the image is forged or genuine
+    pass
