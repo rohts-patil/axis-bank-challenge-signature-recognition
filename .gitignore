@@ -319,4 +319,11 @@ fabric.properties
 pyvenv.cfg
 pip-selfcheck.json
 
+
+node_modules
+build
+npm-debug.log
+.env
+.DS_Stores
+
 # End of https://www.gitignore.io/api/python,django,intellij,pycharm
