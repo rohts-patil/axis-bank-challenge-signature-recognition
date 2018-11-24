@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    .app-container{
+        .header{
+            width: 100%;
+            height: 100px;
+            background: #cc1c5d;
+            mix-blend-mode: multiply;
+            background-image: linear-gradient(88deg, #c81451, #9b103f);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            font-family: Arial, Helvetica,"sans-serif";
+            font-size: 16px;
+            text-align: left;
+            color: #ffffff;
+        }
+        form {
+            margin-top: 5%;
+        }
+        
+        input[type=text], input[type=password], input[type=email] {
+            width: 80%;
+            padding: 12px 20px;
+            display: inline-block;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        
+        button {
+            height: 40px;
+            border: none;
+            border-radius: 2px;
+            background-color: #cc1c5d;
+            width: 80%;
+            color: #fff;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        .login-label{
+           padding-left: 23%;
+        border-bottom: 3px solid #cc1c5d;
+        box-sizing: border-box;
+        width: 80%;
+        }
+        
+        button:hover {
+            opacity: 0.8;
+        }
+        
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+        
+        .imgcontainer {
+            padding: 33px 10px 33px 70px;
+            display: inline-block;
+        }
+        
+        img {
+            float: left;
+        }
+        .netbanking-logo{
+            display: inline;
+            float: left;
+            padding: 3px 10px;
+        }
+        
+        ul{
+            width: 70%;
+            margin: auto;
+            list-style-type: none;
+            box-shadow: 65px 20px 50px rgba(0, 0, 0, 0.3), 25px 25px 40px rgba(128, 128, 128, 0.1) inset;            border-color: #dedede;
+            padding: 53px;
+        }
+        li{
+            width: 80%;
+            margin: 0 20px 0 80px;
+        }
+        
+        .list-Info {
+            margin-bottom: 35px;
+        }
+        .container {
+            padding: 16px;
+        }
+
+        .error{
+            color: #9b103f;
+        }
+        
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+        a{
+            color: #f42c78 !important;
+            cursor: pointer;
+        }
+        .options-container{
+            margin-top: 8%;
+        }
+        .spacing{
+            padding: 10px 25px;
+        }
+    }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+    ul{
+        width: 65%;
+    }
+}
